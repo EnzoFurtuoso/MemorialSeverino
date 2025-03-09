@@ -80,21 +80,54 @@ function showSection(sectionId) {
     document.getElementById(sectionId).style.display = 'block';
 }
 
-function addMessage() {
-    let input = document.getElementById('message-input');
+const messageForm = document.getElementById('message-form');
+const messageInput = document.getElementById('message-input');
+const messageContainer = document.getElementById('messages');
 
-    let messageText = document.getElementById("messages");
+messageForm.addEventListener('submit', (event) => {
+    event.preventDefault();
 
-    if(input.value.trim() !== "") {
-        let newMessage = document.createElement("p");
+    const message = messageInput.value.trim();
 
-        newMessage.textContent = input.value;
-
-        messageText.appendChild(newMessage);
-
-        input.value = '';
+    if(message !== '') {
+        const messageElement = document.createElement('p');
+        messageElement.textContent = message;
+        messageContainer.appendChild(messageElement);
+        messageInput.value = '';
     }
+});
+
+// Carrega as mensagens
+const storedMessages = localStorage.getItem('messages');
+
+if(storedMessages) {
+    const messages = JSON.parse(storedMessages);
+    messages.forEach((message) => {
+        const messageElement = document.createElement('p');
+        messageElement.textContent = message;
+        messageContainer.appendChild(messageElement);
+    })
 }
+
+// Adicionar mensagem 
+
+messageForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const message = messageInput.value.trim();
+
+    if(message !== '') {
+        const messages = JSON.parse(localStorage.getItem('messages')) || [];
+        messages.push(message);
+        localStorage.setItem('messages', JSON.stringify(messages));
+
+        const messageElement = document.createElement('p');
+        messageElement.textContent = message;
+        messageContainer.appendChild(messageElement);
+        messageInput.value = '';
+    }
+})
+
 
 const biografia = document.getElementById("biografia");
 const timeline = document.getElementById("timeline");
