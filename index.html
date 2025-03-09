@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorial Severino</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="header_img">
+        <h1>Memorial Severino</h1>
+    </header>
+
+    <div class="profile">
+        <img src="./img/01.jpg" alt="Foto do Vovô" class="profile-img" data-video-id="2">
+        <p class="profile-msg">Uma lembrança eterna de sua vida e legado</p>
+        <p class="dates">
+            <span class="icon">⭐</span> 03/10/1940 
+            <span class="icon">✝️</span> 22/11/2023
+        </p>
+    </div>
+
+    <div id="modal-1" class="modal">
+        <div class="modal-content">
+          <video src="video-1.mp4" controls></video>
+          <button class="fechar-modal">Fechar</button>
+        </div>
+    </div>
+
+    <div id="modal-2" class="modal">
+        <div class="modal-content">
+            <video src="img/video04.mp4" controls></video>
+            <button class="fechar-modal">Fechar</button>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('biografia')">Biografia</a></li>
+            <li><a href="#" onclick="showSection('galeria')">Mídia</a></li>
+            <li><a href="#" onclick="showSection('depoimentos')">Depoimentos</a></li>
+            <li><a href="#" onclick="showSection('curiosidades')">Curiosidades</a></li>
+        </ul>
+    </nav>
+
+    <section id="biografia" class="content-section">
+        <h2>Biografia</h2>
+        <p>Severino nasceu em 03 de outubro de 1943, na cidade de Brejo Santo  no interior do Ceará.</p>
+        <p>Casou-se com Francisca com que teve 7 filhos.</p>
+        <div id="timeline"></div>
+    </section>
+
+    <section id="galeria" class="content-section" style="display: none;">
+        <h2>Galeria</h2>
+        <div id="photo-galeria">
+            <img src="img/02.jpg">
+            <img src="img/03.jpg">
+            <img src="img/05.jpg">
+            <img src="img/06.jpg">
+            <img src="img/07.jpg" class="profile-img" data-video-id="1">
+        </div>
+    </section>
+
+    <section id="depoimentos" class="content-section" style="display: none;">
+        <h2>Depoimentos e Memórias</h2>
+        <div id="messages">
+            <!-- Espaço para mensagens -->
+        </div>
+        <textarea id="message-input" placeholder="Deixe sua homenagem..."></textarea>
+        <button onclick="addMessage()">Enviar</button>
+    </section>
+
+    <section id="curiosidades" class="content-section" style="display: none;">
+        <h2>Curiosidades</h2>
+        <p>Ele adorava jogar Truco nas tardes de domingo</p>
+        <img src="" alt="">
+    </section>
+    
+    <footer>
+        <p>Com carinho, da família.</p>
+    </footer>
+</body>
+</html>

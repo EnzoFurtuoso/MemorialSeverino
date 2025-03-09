@@ -1,0 +1,215 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.profile {
+  position: relative;
+  margin-top: -75px;
+  text-align: center;
+}
+
+.profile-img {
+  width: 150px;
+  height: 170px;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.header_img {
+  background: url("./img/ceu.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dates {
+  font-size: 18px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.icon {
+  font-size: 20px;
+  margin: 0 5px;
+}
+
+h1 {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #8b4513;
+  padding: 10px 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.aberto {
+  display: block;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 85%;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content video {
+  width: 100%;
+  height: 100%;
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.fechar-modal:hover {
+    background-color: #ccc;
+}
+  
+.modal.aberto {
+display: block;
+}
+
+#biografia {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 6px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+#photo-galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+#photo-galeria img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.filho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filho h2 {
+  margin-bottom: 10px;
+}
+
+.netos-div {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.filho img {
+  width: 150px;
+  height: 150px;
+  border-radius: 40%;
+  margin-bottom: 10px;
+}
+
+.netos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filho li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.filho li img {
+  width: 150px;
+  height: 150px;
+  border-radius: 20%;
+  margin-bottom: 5px;
+}
+
+.foto-avos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.foto-avos img {
+  width: 150px;
+  height: 150px;
+  border-radius: 30%;
+  margin: 10px;
+}
+
+footer {
+  margin-top: 30px;
+  padding: 10px;
+  background-color: #8b4513;
+  color: white;
+}
