@@ -67,6 +67,26 @@ nav ul li a {
   font-size: 18px;
 }
 
+.modalFoto {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalFoto img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -133,18 +153,38 @@ display: block;
   border-radius: 10px;
 }
 
-#photo-galeria {
+.album {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
   justify-content: center;
 }
 
-#photo-galeria img {
+.foto {
+  margin: 10px;
   width: 200px;
-  height: auto;
+  flex-grow: 1;
+  border: 1px solid #ccc;
   border-radius: 10px;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.foto img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.thumbnail:hover {
+  opacity: 0.8;
 }
 
 .filho {

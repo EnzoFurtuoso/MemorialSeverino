@@ -2,69 +2,62 @@ const familia = [
     {
         nome: "José(Beto)",
         foto: './img/Beto.jpg',
-        anoNascimento: '07/02/1969',
         netos: [
-            { nome: 'Tatiane', foto: '', anoNascimento: '23/12/1994' },
-            { nome: 'Bruno', foto: '', anoNascimento: '18/08/1998'}
+            { nome: 'Tatiane', foto: '' },
+            { nome: 'Bruno', foto: './img/Bruno.jpg'}
         ]
     },
 
     {
         nome: "Aparecido(Tim)",
-        foto: '',
-        anoNascimento: '27/10/1971',
+        foto: './img/Tim.jpg',
         netos: [
-            { nome: 'Aparecido(Cido)', foto: '', anoNascimento: '31/07/1997' },
+            { nome: 'Aparecido(Cido)', foto: '' },
         ]
     },
 
     {
         nome: "Maria Aparecida(Tânia)",
         foto: './img/Tania.jpg',
-        anoNascimento: '14/07/1975',
         netos: [
-            { nome: 'Enzo', foto: './img/Enzo.jpg', anoNascimento: '30/09/1993' },
-            { nome: 'Fagner', foto: '', anoNascimento: '23/12/1996' },
-            { nome: 'Venildo', foto: '', anoNascimento: '16/08/1999' },
+            { nome: 'Enzo', foto: './img/Enzo.jpg' },
+            { nome: 'Fagner', foto: './img/Fagner.jpg' },
+            { nome: 'Venildo', foto: './img/Venildo.jpg' },
         ]
     },
 
     {
         nome: "Maria do Socorro(Teia)",
-        foto: '',
-        anoNascimento: '31/10/1976',
+        foto: './img/Teia.jpg',
         netos: [
-            { nome: 'Anderson', foto: './img/Polaco.jpg', anoNascimento: '10/09/1995' },
-            { nome: 'Leonardo', foto: '', anoNascimento: '29/01/2001' }
+            { nome: 'Anderson', foto: './img/Polaco.jpg' },
+            { nome: 'Leonardo', foto: '' }
         ]
     },
 
     {
         nome: "Célia",
         foto: './img/Celia.jpg',
-        anoNascimento: '21/06/1979',
         netos: [
-            { nome: 'Carlos Eduardo', foto: '', anoNascimento: '17/07/2003' },
-            { nome: 'Celine Mariane', foto: './img/Celine.jpg', anoNascimento: '16/09/2005'}
+            { nome: 'Carlos Eduardo', foto: './img/Dudu.jpg' },
+            { nome: 'Celine Mariane', foto: './img/Celine.jpg'}
         ]
     },
 
     {
         nome: "Sergio",
         foto: './img/Sergio.jpg',
-        anoNascimento: '30/06/1983',
         netos: [
-            { nome: 'Luiz Fabiano', foto: '', anoNascimento: '13/12/2009' },
-            { nome: 'Yasmin', foto: '', anoNascimento: '09/01/2010'}
+            { nome: 'Luiz Fabiano', foto: './img/Fabiano.jpg' },
+            { nome: 'Yasmin', foto: './img/yasmim.jpg',}
         ]
     },
 
     {
         nome: "Josias(Bim)",
         foto: './img/Bim.jpg',
-        anoNascimento: '22/06/1989',
         netos: [
-            { nome: 'Guilherme', foto: './img/Gui.jpg', anoNascimento: '04/09/2013' },
+            { nome: 'Guilherme', foto: './img/Gui.jpg' },
         ]
     },
    
@@ -182,3 +175,22 @@ fecharModal.forEach((fecharModal) => {
         modal.classList.remove('aberto');
     })
 })
+
+const thumbnail = document.querySelectorAll(".thumbnail");
+
+thumbnail.forEach((thumbnail) => {
+    thumbnail.addEventListener('click', () => {
+        const modalFoto = document.createElement('div');
+        modalFoto.classList.add('modalFoto');
+
+        const img = document.createElement('img');
+        img.src = thumbnail.src;
+        img.classList.add('modal-img');
+        modalFoto.appendChild(img);
+        document.body.appendChild(modalFoto);
+
+        modalFoto.addEventListener('click', () => {
+            modalFoto.remove();
+        });
+    });
+});
