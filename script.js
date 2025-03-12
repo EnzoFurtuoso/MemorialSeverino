@@ -74,20 +74,28 @@ function showSection(sectionId) {
 }
 
 const messageForm = document.getElementById('message-form');
-const messageInput = document.getElementById('message-input');
-const messageContainer = document.getElementById('messages');
+const messagesContainer = document.getElementById('messages');
 
-messageForm.addEventListener('submit', (event) => {
-    event.preventDefault();
+messageForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = document.getElementById('name-input').value;
+  const message = document.getElementById('message-input').value;
 
-    const message = messageInput.value.trim();
+  const messageCard = document.createElement('div');
+  messageCard.classList.add('message-card');
 
-    if(message !== '') {
-        const messageElement = document.createElement('p');
-        messageElement.textContent = message;
-        messageContainer.appendChild(messageElement);
-        messageInput.value = '';
-    }
+  const nameElement = document.createElement('div');
+  nameElement.classList.add('name');
+  nameElement.textContent = name;
+
+  const messageElement = document.createElement('div');
+  messageElement.classList.add('message');
+  messageElement.textContent = message;
+
+  messageCard.appendChild(nameElement);
+  messageCard.appendChild(messageElement);
+
+  messagesContainer.appendChild(messageCard);
 });
 
 // Carrega as mensagens
