@@ -3,14 +3,14 @@ const familia = [
         nome: "José(Beto)",
         foto: './img/Beto.jpg',
         netos: [
-            { nome: 'Tatiane', foto: '' },
+            { nome: 'Tatiane', foto: './img/Tati.jpg' },
             { nome: 'Bruno', foto: './img/Bruno.jpg'}
         ]
     },
 
     {
         nome: "Aparecido(Tim)",
-        foto: './img/Tim.jpg',
+        foto: './img/tiotim.jpeg',
         netos: [
             { nome: 'Aparecido(Cido)', foto: '' },
         ]
@@ -30,8 +30,8 @@ const familia = [
         nome: "Maria do Socorro(Teia)",
         foto: './img/Teia.jpg',
         netos: [
-            { nome: 'Anderson', foto: './img/Polaco.jpg' },
-            { nome: 'Leonardo', foto: '' }
+            { nome: 'Anderson', foto: './img/anderso,.jpeg' },
+            { nome: 'Leonardo', foto: './img/leo.png' }
         ]
     },
 
@@ -55,7 +55,7 @@ const familia = [
 
     {
         nome: "Josias(Bim)",
-        foto: './img/Bim.jpg',
+        foto: './img/tiobim.jpg',
         netos: [
             { nome: 'Guilherme', foto: './img/Gui.jpg' },
         ]
@@ -137,8 +137,8 @@ if(timeline) {
 
     const fotoavos = `
         <div class="foto-avos">
-            <img src="./img/31.jpg" alt="Foto dos avos">
-            <img src="./img/16.jpg" alt="Foto dos avos">
+            <img src="./img/Dudu2.jpg" alt="Foto dos avos" class="thumbnail2">
+            <img src="./img/vovóo.jpg" alt="Foto dos avos" class="thumbnail2">
         </div>
     `;
     timeline.innerHTML += fotoavos;
@@ -147,12 +147,12 @@ if(timeline) {
         const filhoHTML = `
       <div class="filho">
         <h2>${filho.nome}</h2>
-        <img src="${filho.foto}" alt="${filho.nome}">
+        <img src="${filho.foto}" alt="${filho.nome}" class="thumbnail2">
         <p class="netos-div">Filhos:</p>
         <ul class="netos">
           ${filho.netos.map((neto) => `
             <li>
-              <img src="${neto.foto}" alt="${neto.nome}">
+              <img src="${neto.foto}" alt="${neto.nome}" class="thumbnail2">
               <span>${neto.nome}</span>
             </li>
           `).join('')}
@@ -164,6 +164,21 @@ if(timeline) {
 } else {
     console.log("Elemento timeline não encontrado")
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const thumbnail2 = document.querySelectorAll(".thumbnail2");
+
+    thumbnail2.forEach((thumbnail) => {
+        thumbnail.addEventListener('click', () => {
+            if (thumbnail.classList.contains('enlarged')) {
+                thumbnail.classList.remove('enlarged');
+            } else {
+                thumbnail2.forEach(img => img.classList.remove('enlarged'));
+                thumbnail.classList.add('enlarged');
+            }
+        })
+    });
+});
 
 const fotoPerfil = document.querySelectorAll('.profile-img');
 
@@ -177,9 +192,15 @@ fotoPerfil.forEach((foto) => {
 
 const fecharModal = document.querySelectorAll('.fechar-modal');
  
-fecharModal.forEach((fecharModal) => {
-    fecharModal.addEventListener('click', () => {
-        const modal = fecharModal.parentNode.parentNode;
+fecharModal.forEach((button) => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.modal');
+        const video = modal.querySelector('video');
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+        }
+
         modal.classList.remove('aberto');
     })
 })
