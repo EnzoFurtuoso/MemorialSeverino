@@ -33,6 +33,9 @@ body {
 }
 
 .dates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 18px;
   color: #555;
   margin-top: 10px;
@@ -40,7 +43,7 @@ body {
 
 .icon {
   font-size: 20px;
-  margin: 0 5px;
+  margin-right: 5px;
 }
 
 h1 {
@@ -90,11 +93,14 @@ nav ul li a {
 .modal {
   display: none;
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal.aberto {
@@ -108,9 +114,9 @@ nav ul li a {
   transform: translate(-50%, -50%);
   width: 80%;
   height: 85%;
-  background-color: #fff;
+  background-color: #fefefe;
   padding: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #888;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -138,19 +144,29 @@ display: block;
 }
 
 #biografia {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ddd;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#biografia h2 {
+  margin-top: 0;
+}
+
+.biografia-texto {
+  margin-bottom: 20px;
+}
+
+.timeline {
+  border-top: 2px solid #ccc;
+  padding-top: 20px;
 }
 
 .content-section {
   max-width: 800px;
   margin: 20px auto;
-  padding: 6px;
-  background: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  padding: 20px;
 }
 
 .album {
@@ -247,6 +263,22 @@ display: block;
   margin: 10px;
 }
 
+.thumbnail2 {
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail2:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.thumbnail2.enlarged{
+  transform: scale(2);
+  z-index: 10;
+  position: relative;
+}
+
 #message-form {
   display: flex;
   flex-direction: column;
@@ -290,7 +322,7 @@ display: block;
 }
 
 #message-card {
-  FFbackground-color: #F;
+  background-color: #FFF;
 }
 
 footer {
