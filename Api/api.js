@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql2');
 const cors = require('cors');
+require('dotenv').config(); // Carregar variáveis de ambiente do arquivo .env
 
 const app = express();
 const port = 3000;
@@ -11,10 +12,11 @@ app.use(bodyParser.json());
 
 // Configuração do banco de dados MySQL
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'memorial'
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    port: process.env.DB_PORT,
 });
 
 // Conectar ao banco de dados
