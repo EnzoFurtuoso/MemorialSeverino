@@ -344,7 +344,7 @@ document.getElementById('message-form').addEventListener('submit', async (event)
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ name: nameInput, message: messageInput }),
+            body: JSON.stringify({ name: nameInput, mensagem: messageInput }),
         });
         if(response.ok) {
             alert('Depoimento enviado com sucesso!');
@@ -374,7 +374,7 @@ async function loadMessages() {
                 messagensDiv.appendChild(messageElement);
         });
     } catch (error) {
-        cosole.log('Erro ao carregar mensagens', error);
+        console.log('Erro ao carregar mensagens', error);
     }
 }
 document.addEventListener('DOMContentLoaded', () => {
