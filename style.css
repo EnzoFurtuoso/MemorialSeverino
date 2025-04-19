@@ -80,14 +80,15 @@ nav ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
+  cursor: pointer;
 }
 
 .modalFoto img {
   width: 80%;
   height: 80%;
-  object-fit: contain;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .modal {
@@ -106,6 +107,7 @@ nav ul li a {
 .modal.aberto {
   display: block;
 }
+
 
 .modal-content {
   position: absolute;
@@ -277,6 +279,52 @@ display: block;
   transform: scale(2);
   z-index: 10;
   position: relative;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  background-color: #8b4513;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tab-button:hover {
+  background-color: #6f4c3e;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active{
+  display: block;
+}
+
+.img-galeria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.img-galeria .foto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-galeria img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 #message-form {
