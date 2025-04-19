@@ -118,12 +118,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
     thumbnail2.forEach((thumbnail) => {
         thumbnail.addEventListener('click', () => {
-            if (thumbnail.classList.contains('enlarged')) {
-                thumbnail.classList.remove('enlarged');
-            } else {
-                thumbnail2.forEach(img => img.classList.remove('enlarged'));
-                thumbnail.classList.add('enlarged');
-            }
+            // Criar Modal
+            const modalFoto = document.createElement('div');
+            modalFoto.classList.add('modalFoto');
+
+            //adicionar imagem ao modal
+            const img = document.createElement('img');
+            img.src = thumbnail.src;
+            img.classList.add('modal-img');
+            modalFoto.appendChild(img);
+
+            // Adicionar o modal ao body
+            document.body.appendChild(modalFoto);
+
+            // Escurecer o fundo
+            modalFoto.style.position = 'fixed';
+            modalFoto.style.top = '0';
+            modalFoto.style.left = '0';
+            modalFoto.style.width = '100%';
+            modalFoto.style.height = '100%';
+            modalFoto.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+            modalFoto.style.display = 'flex';
+            modalFoto.style.justifyContent = 'center';
+            modalFoto.style.alignItems = 'center';
+            modalFoto.style.zIndex = '1000';
+            modalFoto.style.cursor = 'pointer';
+
+            // Fechar o modal ao clicar
+            modalFoto.addEventListener('click', () => {
+                modalFoto.remove();
+            });
+
+            // if (thumbnail.classList.contains('enlarged')) {
+            //     thumbnail.classList.remove('enlarged');
+            // } else {
+            //     thumbnail2.forEach(img => img.classList.remove('enlarged'));
+            //     thumbnail.classList.add('enlarged');
+            // }
         })
     });
 });
@@ -290,3 +321,62 @@ function showTab(tabId) {
         activeTab.style.display = 'block';
     }
 }
+
+window.showTab = showTab;
+
+
+
+// Conectar com o banco de dados
+document.getElementById('message-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const nameInput = document.getElementById('name-input').value;
+    const messageInput = document.getElementById('message-input').value;
+
+    if(!nameInput, !messageInput) {
+        alert('Por favor, preencha todos os campos.');
+        return;
+    }
+
+    try {
+        const response = await fetch('http://localhost:3000/depoimentos', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name: nameInput, message: messageInput }),
+        });
+        if(response.ok) {
+            alert('Depoimento enviado com sucesso!');
+            document.getElementById('name-input').value = '';
+            document.getElementById('message-input').value = '';
+            loadMessages();
+        } else {
+            alert('Erro ao enviar depoimento. Tente novamente mais tarde.');
+        }
+    } catch (error) {
+        console.log('Erro', error);
+        alert('Erro a conectar ao servidor.');
+    }
+});
+
+async function loadMessages() {
+    try{
+        const response = await fetch('http://localhost:3000/depoimentos');
+        const messages = await response.json();
+
+        const messagensDiv = document.getElementById('messages');
+        messagensDiv.innerHTML = '';
+
+        messages.forEach((message) => {
+            const messageElement = document.createElement('div');
+                messageElement.innerHTML = `<strong>${message.nome}:</strong> ${message.mensagem}`;
+                messagensDiv.appendChild(messageElement);
+        });
+    } catch (error) {
+        cosole.log('Erro ao carregar mensagens', error);
+    }
+}
+document.addEventListener('DOMContentLoaded', () => {
+    loadMessages();
+});

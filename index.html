@@ -24,14 +24,14 @@
 
     <div id="modal-1" class="modal">
         <div class="modal-content">
-          <video src="./img/video03.mp4" controls></video>
+          <video src="./img/Videos/video03.mp4" controls></video>
           <button class="fechar-modal">Fechar</button>
         </div>
     </div>
 
     <div id="modal-2" class="modal">
         <div class="modal-content">
-            <video src="img/video04.mp4" controls></video>
+            <video src="img/Videos/video04.mp4" controls></video>
             <button class="fechar-modal">Fechar</button>
         </div>
     </div>
@@ -63,7 +63,7 @@
             <button class="tab-button" onclick="showTab('video-galeria')">Vídeos</button>
         </div>
 
-        <div id="photo-galeria" class="tab-content">
+        <div id="photo-galeria" class="tab-content img-galeria">
             <div class="foto">
                 <img src="img/02.jpg" class="thumbnail">
             </div>
@@ -148,13 +148,13 @@
 
         <div id="video-galeria" class="tab-content" style="display: none;">
             <div class="video">
-                <video src="img/video01.mp4" controls class="thumbnail"></video>
+                <video src="img/Videos/video01.mp4" controls class="thumbnail"></video>
             </div>
             <div class="video">
-                <video src="img/video02.mp4" controls class="thumbnail"></video>
+                <video src="img/Videos/video03.mp4" controls class="thumbnail"></video>
             </div>
             <div class="video">
-                <video src="img/video03.mp4" controls class="thumbnail"></video>
+                <video src="img/Videos/video04.mp4" controls class="thumbnail"></video>
             </div>
         </div>
     </section>
@@ -165,7 +165,7 @@
             <!-- Espaço para mensagens -->
         </div>
         <form id="message-form">
-            <label for="message-input">Nome:</label>
+            <label for="name-input">Nome:</label>
             <input type="text" id="name-input">
             <textarea id="message-input" placeholder="Deixe sua homenagem..."></textarea>
             <button id="send-button">Enviar</button>
