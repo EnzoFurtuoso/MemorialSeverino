@@ -96,12 +96,22 @@ if(timeline) {
       <div class="filho">
         <h2>${filho.nome}</h2>
         <img src="${filho.foto}" alt="${filho.nome}" class="thumbnail2">
-        <p class="netos-div">Filhos:</p>
+        <p class="netos-div">Netos:</p>
         <ul class="netos">
           ${filho.netos.map((neto) => `
             <li>
               <img src="${neto.foto}" alt="${neto.nome}" class="thumbnail2">
               <span>${neto.nome}</span>
+              ${neto.bisnetos ? `
+                <ul class="bisnetos">
+                  ${neto.bisnetos.map((bisneto) => `
+                    <li>
+                      <img src="${bisneto.foto}" alt="${bisneto.nome}" class="thumbnail2">
+                      <span>${bisneto.nome}</span>
+                    </li>
+                  `).join('')}
+                </ul>
+              ` : ''}
             </li>
           `).join('')}
         </ul>

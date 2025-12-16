@@ -3,7 +3,10 @@ export const familia = [
         nome: "José(Beto)",
         foto: './img/Beto.jpg',
         netos: [
-            { nome: 'Tatiane', foto: './img/Tati.jpg' },
+            { nome: 'Tatiane', foto: './img/Tati.jpg', bisnetos: [
+                { nome: 'Jhenniffer', foto: './img/bisneto1.jpg' },
+                { nome: 'Bisneto 2', foto: './img/bisneto2.jpg' }
+            ]},
             { nome: 'Bruno', foto: './img/Bruno.jpg'}
         ]
     },
@@ -21,7 +24,10 @@ export const familia = [
         foto: './img/Tania.jpg',
         netos: [
             { nome: 'Enzo', foto: './img/Enzo.jpg' },
-            { nome: 'Fagner', foto: './img/Fagner.jpg' },
+            { nome: 'Fagner', foto: './img/Fagner.jpg', bisnetos: [
+                { nome: 'João Ademar', foto: './img/Demazim.jpg' },
+                { nome: ' Daniel José', foto: './img/daniel.jpg' }
+            ]},
             { nome: 'Venildo', foto: './img/Venildo.jpg' },
         ]
     },
@@ -30,7 +36,9 @@ export const familia = [
         nome: "Maria do Socorro(Teia)",
         foto: './img/Teia.jpg',
         netos: [
-            { nome: 'Anderson', foto: './img/anderso,.jpeg' },
+            { nome: 'Anderson', foto: './img/anderso,.jpeg', bisnetos: [
+                { nome: 'Mariana', foto: './img/maty.jpg' }
+            ]},
             { nome: 'Leonardo', foto: './img/leo.png' }
         ]
     },
@@ -39,7 +47,7 @@ export const familia = [
         nome: "Célia",
         foto: './img/Celia.jpg',
         netos: [
-            { nome: 'Carlos Eduardo', foto: './img/Dudu.jpg' },
+            { nome: 'Carlos Eduardo', foto: './img/Dudu.JPG' },
             { nome: 'Celine Mariane', foto: './img/Celine.jpg'}
         ]
     },
