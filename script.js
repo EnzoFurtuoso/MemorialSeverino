@@ -9,6 +9,128 @@ import {
   limitToLast,
 } from "./firebase-config.js";
 
+// Lista de todas as fotos da pasta img/Fotos
+const fotos = [
+  "02.jpg",
+  "03.jpg",
+  "05.jpg",
+  "06.jpg",
+  "07.jpg",
+  "08.jpg",
+  "10.jpg",
+  "11.jpg",
+  "12.jpg",
+  "13.jpg",
+  "15.jpg",
+  "16.jpg",
+  "17.jpg",
+  "18.jpg",
+  "19.jpg",
+  "21.jpg",
+  "22.jpg",
+  "23.jpg",
+  "25.jpg",
+  "26.jpg",
+  "27.jpg",
+  "28.jpg",
+  "29.jpg",
+  "30.jpg",
+  "31.jpg",
+  "32.jpg",
+  "33.jpg",
+  "34.jpg",
+  "35.jpg",
+  "36.jpg",
+  "37.jpg",
+  "38.jpg",
+  "39.jpg",
+  "40.jpg",
+  "41.jpg",
+  "42.jpg",
+  "43.jpg",
+  "44.jpg",
+  "45.jpg",
+  "46.jpg",
+  "47.jpg",
+  "48.jpg",
+  "49.jpg",
+  "50.jpg",
+  "51.jpg",
+  "52.jpg",
+  "54.jpg",
+  "55.jpg",
+  "56.jpg",
+  "57.jpg",
+  "58.jpg",
+  "59.jpg",
+  "60.jpg",
+  "61.jpg",
+  "62.jpg",
+  "63.jpg",
+  "64.JPG",
+  "65.JPG",
+  "66.jpg",
+  "67.jpg",
+  "68.jpeg",
+  "69.jpeg",
+  "69.jpg",
+  "70.jpeg",
+  "70.jpg",
+  "71.jpeg",
+  "72.jpeg",
+  "72.JPG",
+  "73.jpeg",
+  "74.jpeg",
+  "75.jpeg",
+  "76.jpeg",
+  "77.jpeg",
+  "78.jpeg",
+  "79.jpeg",
+  "80.jpeg",
+  "81.jpeg",
+  "82.jpeg",
+  "83.jpeg",
+  "84.jpeg",
+  "85.jpeg",
+  "86.jpeg",
+  "87.jpeg",
+  "88.jpeg",
+  "89.jpg",
+  "90.jpg",
+  "91.jpg",
+  "92.jpg",
+  "93.jpg",
+  "94.jpg",
+  "95.jpg",
+  "96.jpg",
+  "97.jpg",
+  "98.jpg",
+  "99.jpg",
+  "100.jpg",
+  "101.jpg",
+  "102.jpg",
+  "103.jpg",
+];
+
+// Função para carregar a galeria de fotos
+function carregarGaleria() {
+  const galeria = document.getElementById("photo-galeria");
+  if (!galeria) return;
+
+  fotos.forEach((foto) => {
+    const divFoto = document.createElement("div");
+    divFoto.classList.add("foto");
+
+    const img = document.createElement("img");
+    img.src = `img/fotos/${foto}`;
+    img.classList.add("thumbnail");
+    img.alt = `Foto ${foto}`;
+
+    divFoto.appendChild(img);
+    galeria.appendChild(divFoto);
+  });
+}
+
 function showSection(sectionId) {
   // Esconde todas as seções
   const sections = document.querySelectorAll(".content-section");
@@ -28,6 +150,7 @@ window.showSection = showSection;
 document.addEventListener("DOMContentLoaded", () => {
   showSection("biografia");
   carregarDepoimentos();
+  carregarGaleria();
 });
 
 const messageForm = document.getElementById("message-form");

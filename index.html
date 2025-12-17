@@ -1,194 +1,151 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memorial Severino</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script type="module" src="script.js"></script>
     <script src="familia.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header_img">
-        <h1>Memorial Severino Antonio Furtuoso</h1>
+      <h1>Memorial Severino Antonio Furtuoso</h1>
     </header>
 
     <div class="profile">
-        <img src="./img/Perfil.jpg" alt="Foto do Vovô" class="profile-img" data-video-id="2">
-        <p class="profile-msg">Uma lembrança eterna de sua vida e legado</p>
-        <p class="dates">
-            <span class="icon">⭐ 03/10/1940 </span>
-            <span class="icon">✝️ 22/11/2023</span> 
-        </p>
+      <img
+        src="./img/Perfil.jpg"
+        alt="Foto do Vovô"
+        class="profile-img"
+        data-video-id="2"
+      />
+      <p class="profile-msg">Uma lembrança eterna de sua vida e legado</p>
+      <p class="dates">
+        <span class="icon">⭐ 03/10/1940 </span>
+        <span class="icon">✝️ 22/11/2023</span>
+      </p>
     </div>
 
     <div id="modal-1" class="modal">
-        <div class="modal-content">
-          <video src="./img/Videos/video03.mp4" controls></video>
-          <button class="fechar-modal">Fechar</button>
-        </div>
+      <div class="modal-content">
+        <video src="./img/Videos/video03.mp4" controls></video>
+        <button class="fechar-modal">Fechar</button>
+      </div>
     </div>
 
     <div id="modal-2" class="modal">
-        <div class="modal-content">
-            <video src="img/Videos/video04.mp4" controls></video>
-            <button class="fechar-modal">Fechar</button>
-        </div>
+      <div class="modal-content">
+        <video src="img/Videos/video04.mp4" controls></video>
+        <button class="fechar-modal">Fechar</button>
+      </div>
     </div>
 
     <nav>
-        <ul>
-            <li><a href="#" onclick="showSection('biografia')">Biografia</a></li>
-            <li><a href="#" onclick="showSection('galeria')">Mídia</a></li>
-            <li><a href="#" onclick="showSection('depoimentos')">Depoimentos</a></li>
-            <li><a href="#" onclick="showSection('curiosidades')">Curiosidades</a></li>
-        </ul>
+      <ul>
+        <li><a href="#" onclick="showSection('biografia')">Biografia</a></li>
+        <li><a href="#" onclick="showSection('galeria')">Mídia</a></li>
+        <li>
+          <a href="#" onclick="showSection('depoimentos')">Depoimentos</a>
+        </li>
+        <li>
+          <a href="#" onclick="showSection('curiosidades')">Curiosidades</a>
+        </li>
+      </ul>
     </nav>
 
     <section id="biografia" class="content-section">
-        <h2>Biografia</h2>
-        <div class="biografia-texto">
-            <p>Severino nasceu em 03 de outubro de 1943, na cidade de Brejo Santo  no interior do Ceará.</p>
-            <p>Casou-se com Francisca com que teve 7 filhos.</p>
-            <p>13 Netos</p>
-            <p>5 Bisnetos</p>
-        </div>
+      <h2>Biografia</h2>
+      <div class="biografia-texto">
+        <p>
+          Severino nasceu em 03 de outubro de 1943, na cidade de Brejo Santo no
+          interior do Ceará.
+        </p>
+        <p>Casou-se com Francisca com que teve 7 filhos.</p>
+        <p>13 Netos</p>
+        <p>5 Bisnetos</p>
+      </div>
 
-        <div id="timeline" class="timeline"></div>
+      <div id="timeline" class="timeline"></div>
     </section>
 
-    <section id="galeria" class="content-section" style="display: none;">
-        <h2>Galeria</h2>
+    <section id="galeria" class="content-section" style="display: none">
+      <h2>Galeria</h2>
 
-        <div class="tabs">
-            <button class="tab-button" onclick="showTab('photo-galeria')">Fotos</button>
-            <button class="tab-button" onclick="showTab('video-galeria')">Vídeos</button>
+      <div class="tabs">
+        <button class="tab-button" onclick="showTab('photo-galeria')">
+          Fotos
+        </button>
+        <button class="tab-button" onclick="showTab('video-galeria')">
+          Vídeos
+        </button>
+      </div>
+
+      <div id="photo-galeria" class="tab-content img-galeria">
+        <!-- Fotos serão carregadas dinamicamente pelo JavaScript -->
+      </div>
+
+      <div id="video-galeria" class="tab-content" style="display: none">
+        <div class="video">
+          <video
+            src="img/Videos/video01.mp4"
+            controls
+            class="thumbnail"
+          ></video>
         </div>
-
-        <div id="photo-galeria" class="tab-content img-galeria">
-            <div class="foto">
-                <img src="img/02.jpg" class="thumbnail">
-            </div>
-
-            <div class="foto">
-                <img src="img/03.jpg" class="thumbnail">
-            </div>
-            
-            <div class="foto">
-                <img src="img/05.jpg" class="thumbnail">
-            </div>
-
-            <div class="foto">
-                <img src="img/06.jpg" class="thumbnail">
-            </div>
-           
-            <div class="foto">
-                <img src="img/07.jpg" class="profile-img thumbnail" data-video-id="1">
-            </div>
-
-            <div class="foto">
-                <img src="img/10.jpg" class="thumbnail">
-            </div>
-
-            <div class="foto">
-                <img src="img/11.jpg" class="thumbnail">
-            </div>
-
-            <div class="foto">
-                <img src="img/13.jpg" class="thumbnail">
-            </div>
-
-            <div class="foto">
-                <img src="img/17.jpg" class="thumbnail">
-            </div>
-
-            <div class="foto">
-                <img src="img/22.jpg" class="thumbnail">
-            </div>
-
-            <div class="foto">
-                <img src="img/37.jpg" class="thumbnail">
-            </div>
-
-            <div class="foto">
-                <img src="img/48.jpg" class="thumbnail">
-            </div>
-
-            <div class="foto">
-                <img src="img/venildo2.jpg" class="thumbnail">
-            </div>
-
-            <div class="foto">
-                <img src="img/Tania2.jpg" class="thumbnail">
-            </div>
-
-            <div class="foto">
-                <img src="img/Tania3.jpg" class="thumbnail">
-            </div>
-
-            <div class="foto">
-                <img src="img/Dudu2.jpg" class="thumbnail">
-            </div>
-
-            <div class="foto">
-                <img src="img/47.jpg" class="thumbnail">
-            </div>
-
-            <div class="foto">
-                <img src="img/familia.jpg" class="thumbnail">
-            </div>
-
-            <div class="foto">
-                <img src="img/34.jpg" class="thumbnail">
-            </div>
-
-            <div class="foto">
-                <img src="img/familia02.jpg" class="thumbnail">
-            </div>
-            
+        <div class="video">
+          <video
+            src="img/Videos/video03.mp4"
+            controls
+            class="thumbnail"
+          ></video>
         </div>
-
-        <div id="video-galeria" class="tab-content" style="display: none;">
-            <div class="video">
-                <video src="img/Videos/video01.mp4" controls class="thumbnail"></video>
-            </div>
-            <div class="video">
-                <video src="img/Videos/video03.mp4" controls class="thumbnail"></video>
-            </div>
-            <div class="video">
-                <video src="img/Videos/video04.mp4" controls class="thumbnail"></video>
-            </div>
+        <div class="video">
+          <video
+            src="img/Videos/video04.mp4"
+            controls
+            class="thumbnail"
+          ></video>
         </div>
+      </div>
     </section>
 
-    <section id="depoimentos" class="content-section" style="display: none;">
-        <h2>Depoimentos e Memórias</h2>
-        <div id="messages">
-            <!-- Espaço para mensagens -->
-        </div>
-        <form id="message-form">
-            <label for="name-input">Nome:</label>
-            <input type="text" id="name-input" placeholder="Digite o seu nome" required>
-            <textarea id="message-input" placeholder="Deixe sua homenagem..."></textarea>
-            <button id="send-button" type="submit">Enviar</button>
-        </form>  
+    <section id="depoimentos" class="content-section" style="display: none">
+      <h2>Depoimentos e Memórias</h2>
+      <div id="messages">
+        <!-- Espaço para mensagens -->
+      </div>
+      <form id="message-form">
+        <label for="name-input">Nome:</label>
+        <input
+          type="text"
+          id="name-input"
+          placeholder="Digite o seu nome"
+          required
+        />
+        <textarea
+          id="message-input"
+          placeholder="Deixe sua homenagem..."
+        ></textarea>
+        <button id="send-button" type="submit">Enviar</button>
+      </form>
     </section>
 
-    <section id="curiosidades" class="content-section" style="display: none;">
-        <h2>Curiosidades</h2>
-        <p>Ele adorava jogar Truco nas tardes de domingo</p>
-        <div class="img-galeria">
-            <div class="foto">
-                <img src="img/PAMONHA 060.jpg" alt="" class="thumbnail">
-            </div>
-            <div class="foto">
-                <img src="img/PAMONHA 044.jpg" alt="" class="thumbnail">
-            </div>
+    <section id="curiosidades" class="content-section" style="display: none">
+      <h2>Curiosidades</h2>
+      <p>Ele adorava jogar Truco nas tardes de domingo</p>
+      <div class="img-galeria">
+        <div class="foto">
+          <img src="img/curiosidade01.jpg" alt="" class="thumbnail" />
         </div>
+        <div class="foto">
+          <img src="img/curiosidade02.jpg" alt="" class="thumbnail" />
+        </div>
+      </div>
     </section>
-    
+
     <footer>
-        <p>Com carinho, da família.</p>
+      <p>Com carinho, da família.</p>
     </footer>
-</body>
+  </body>
 </html>

@@ -1,71 +1,71 @@
 export const familia = [
     {
         nome: "José(Beto)",
-        foto: './img/Beto1.jpg',
+        foto: './img/filhos/Beto.jpg',
         netos: [
-            { nome: 'Tatiane', foto: './img/Tati.jpg', bisnetos: [
-                { nome: 'Jhennyffer', foto: './img/bisneto1.jpg' },
-                { nome: 'Layla', foto: './img/bisneto2.jpg' }
+            { nome: 'Tatiane', foto: './img/netos/Tati.jpg', bisnetos: [
+                { nome: 'Jhennyffer', foto: './img/bisnetos/bisneto1.jpg' },
+                { nome: 'Layla', foto: './img/bisnetos/bisneto2.jpg' }
             ]},
-            { nome: 'Bruno', foto: './img/Bruno.jpg'}
+            { nome: 'Bruno', foto: './img/netos/Bruno.jpg'}
         ]
     },
 
     {
         nome: "Aparecido(Tim)",
-        foto: './img/tiotim.jpeg',
+        foto: './img/filhos/tiotim.jpeg',
         netos: [
-            { nome: 'Aparecido(Cido)', foto: './img/cido.png' },
+            { nome: 'Aparecido(Cido)', foto: './img/netos/cido.png' },
         ]
     },
 
     {
         nome: "Maria Aparecida(Tânia)",
-        foto: './img/Tania.jpg',
+        foto: './img/filhos/Tania.jpg',
         netos: [
-            { nome: 'Enzo', foto: './img/Enzo.jpg' },
-            { nome: 'Fagner', foto: './img/Fagner.jpg', bisnetos: [
-                { nome: 'João Ademar', foto: './img/Demazim.jpg' },
-                { nome: ' Daniel José', foto: './img/daniel.jpg' }
+            { nome: 'Enzo', foto: './img/netos/Enzo.jpg' },
+            { nome: 'Fagner', foto: './img/netos/Fagner.jpg', bisnetos: [
+                { nome: 'João Ademar', foto: './img/bisnetos/Demazim.jpg' },
+                { nome: ' Daniel José', foto: './img/bisnetos/daniel.jpg' }
             ]},
-            { nome: 'Venildo', foto: './img/Venildo.jpg' },
+            { nome: 'Venildo', foto: './img/netos/Venildo.jpg' },
         ]
     },
 
     {
         nome: "Maria do Socorro(Teia)",
-        foto: './img/Teia.jpg',
+        foto: './img/filhos/Teia.jpg',
         netos: [
-            { nome: 'Anderson', foto: './img/anderso,.jpeg', bisnetos: [
-                { nome: 'Mariana', foto: './img/maty.jpg' }
+            { nome: 'Anderson', foto: './img/netos/anderson.jpeg', bisnetos: [
+                { nome: 'Mariana', foto: './img/bisnetos/mary.jpg' }
             ]},
-            { nome: 'Leonardo', foto: './img/leo.png' }
+            { nome: 'Leonardo', foto: './img/netos/leo.png' }
         ]
     },
 
     {
         nome: "Célia",
-        foto: './img/Celia.jpg',
+        foto: './img/filhos/Celia.jpg',
         netos: [
-            { nome: 'Carlos Eduardo', foto: './img/Duduu.jpg' },
-            { nome: 'Celine Mariane', foto: './img/Celine.jpg'}
+            { nome: 'Carlos Eduardo', foto: './img/netos/Duduu.jpg' },
+            { nome: 'Celine Mariane', foto: './img/netos/Celine.jpg'}
         ]
     },
 
     {
         nome: "Sergio",
-        foto: './img/Sergio.jpg',
+        foto: './img/filhos/Sergio.jpg',
         netos: [
-            { nome: 'Luiz Fabiano', foto: './img/Fabiano.jpg' },
-            { nome: 'Yasmin', foto: './img/yasmim.jpg',}
+            { nome: 'Luiz Fabiano', foto: './img/netos/Fabiano.jpg' },
+            { nome: 'Yasmin', foto: './img/netos/yasmim.jpg',}
         ]
     },
 
     {
         nome: "Josias(Bim)",
-        foto: './img/tiobim.jpg',
+        foto: './img/filhos/tiobim.jpg',
         netos: [
-            { nome: 'Guilherme', foto: './img/Gui.jpg' },
+            { nome: 'Guilherme', foto: './img/netos/Gui.jpg' },
         ]
     },
    
