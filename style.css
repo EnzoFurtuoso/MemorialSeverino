@@ -139,7 +139,6 @@ nav ul li a {
   display: block;
 }
 
-
 .modal-content {
   position: absolute;
   top: 50%;
@@ -159,21 +158,21 @@ nav ul li a {
 }
 
 .fechar-modal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }
 
 .fechar-modal:hover {
-    background-color: #ccc;
+  background-color: #ccc;
 }
-  
+
 .modal.aberto {
-display: block;
+  display: block;
 }
 
 #biografia {
@@ -252,7 +251,7 @@ display: block;
 }
 
 .filho::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -40px;
   left: 50%;
@@ -268,19 +267,19 @@ display: block;
 .filho h2 {
   margin-bottom: 10px;
   color: #6d4c41;
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
 }
 
 .netos-div {
   font-size: 20px;
   margin: 20px 0 10px;
   color: #8b6f47;
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
   position: relative;
 }
 
 .netos-div::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -15px;
   left: 50%;
@@ -307,7 +306,7 @@ display: block;
 }
 
 .foto-avos::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -30px;
   left: 50%;
@@ -340,7 +339,7 @@ display: block;
 }
 
 .netos::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -15px;
   left: 0;
@@ -365,7 +364,7 @@ display: block;
 }
 
 .netos > li::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -15px;
   left: 50%;
@@ -401,7 +400,7 @@ display: block;
 }
 
 .bisnetos::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -15px;
   left: 10%;
@@ -428,7 +427,7 @@ display: block;
 }
 
 .bisnetos li::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 15px;
   top: -15px;
@@ -479,7 +478,7 @@ display: block;
   transform: scale(1.1);
 }
 
-.thumbnail2.enlarged{
+.thumbnail2.enlarged {
   transform: scale(2);
   z-index: 10;
   position: relative;
@@ -509,7 +508,7 @@ display: block;
   display: none;
 }
 
-.tab-content.active{
+.tab-content.active {
   display: block;
 }
 
@@ -569,7 +568,8 @@ display: block;
   margin-bottom: 10px;
 }
 
-#message-form input, #message-form textarea {
+#message-form input,
+#message-form textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -578,8 +578,8 @@ display: block;
 }
 
 #message-form button {
-  background-color: #4CAF50;
-  color: #FFF;
+  background-color: #4caf50;
+  color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -591,14 +591,45 @@ display: block;
 }
 
 #messages {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
   padding: 20px;
+  width: 100%;
 }
 
-#message-card {
-  background-color: #FFF;
+.message-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.message-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.message-card .name {
+  font-weight: bold;
+  color: #8b4513;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.message-card .message {
+  color: #555;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.message-card .date {
+  font-size: 12px;
+  color: #999;
+  margin-top: 10px;
+  text-align: right;
 }
 
 footer {

@@ -4,8 +4,8 @@ export const familia = [
         foto: './img/Beto.jpg',
         netos: [
             { nome: 'Tatiane', foto: './img/Tati.jpg', bisnetos: [
-                { nome: 'Jhenniffer', foto: './img/bisneto1.jpg' },
-                { nome: 'Bisneto 2', foto: './img/bisneto2.jpg' }
+                { nome: 'Jhennyffer', foto: './img/bisneto1.jpg' },
+                { nome: 'Layla', foto: './img/bisneto2.jpg' }
             ]},
             { nome: 'Bruno', foto: './img/Bruno.jpg'}
         ]
@@ -47,7 +47,7 @@ export const familia = [
         nome: "Célia",
         foto: './img/Celia.jpg',
         netos: [
-            { nome: 'Carlos Eduardo', foto: './img/Dudu.JPG' },
+            { nome: 'Carlos Eduardo', foto: './img/Duduu.jpg' },
             { nome: 'Celine Mariane', foto: './img/Celine.jpg'}
         ]
     },
