@@ -1,7 +1,7 @@
 export const familia = [
     {
         nome: "José(Beto)",
-        foto: './img/Beto.jpg',
+        foto: './img/Beto1.jpg',
         netos: [
             { nome: 'Tatiane', foto: './img/Tati.jpg', bisnetos: [
                 { nome: 'Jhennyffer', foto: './img/bisneto1.jpg' },

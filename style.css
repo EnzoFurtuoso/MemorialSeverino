@@ -290,8 +290,8 @@ nav ul li a {
 }
 
 .filho img {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   position: relative;
   padding: 20px;
   border-radius: 15%;
@@ -300,8 +300,8 @@ nav ul li a {
 
 .filho > .thumbnail2 {
   border-radius: 15%;
-  width: 120px;
-  height: 120px;
+  width: 180px;
+  height: 190px;
   object-fit: cover;
 }
 
