@@ -112,6 +112,18 @@ const fotos = [
   "103.jpg",
 ];
 
+// Lista de todos os vídeos da pasta img/Videos
+const videos = [
+  "video01.mp4",
+  "video02.mp4",
+  "video03.mp4",
+  "video04.mp4",
+  "Video05.mp4",
+  "video06.mp4",
+  "Video07.mp4",
+  "video070.mp4",
+];
+
 // Função para carregar a galeria de fotos
 function carregarGaleria() {
   const galeria = document.getElementById("photo-galeria");
@@ -128,6 +140,25 @@ function carregarGaleria() {
 
     divFoto.appendChild(img);
     galeria.appendChild(divFoto);
+  });
+}
+
+// Função para carregar a galeria de vídeos
+function carregarVideos() {
+  const galeriaVideos = document.getElementById("video-galeria");
+  if (!galeriaVideos) return;
+
+  videos.forEach((video) => {
+    const divVideo = document.createElement("div");
+    divVideo.classList.add("video");
+
+    const videoElement = document.createElement("video");
+    videoElement.src = `img/Videos/${video}`;
+    videoElement.classList.add("thumbnail");
+    videoElement.controls = true;
+
+    divVideo.appendChild(videoElement);
+    galeriaVideos.appendChild(divVideo);
   });
 }
 
@@ -151,6 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
   showSection("biografia");
   carregarDepoimentos();
   carregarGaleria();
+  carregarVideos();
 });
 
 const messageForm = document.getElementById("message-form");
