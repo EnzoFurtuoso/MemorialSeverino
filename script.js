@@ -263,7 +263,7 @@ const timeline = document.getElementById("timeline");
 if (timeline) {
   const fotoavos = `
         <div class="foto-avos">
-            <img src="./img/71.jpg" alt="Foto dos avos" class="thumbnail2">
+            <img src="./img/71.JPG" alt="Foto dos avos" class="thumbnail2">
             <img src="./img/vovóo.jpg" alt="Foto dos avos" class="thumbnail2">
         </div>
     `;
