@@ -134,7 +134,7 @@ function carregarGaleria() {
     divFoto.classList.add("foto");
 
     const img = document.createElement("img");
-    img.src = `img/fotos/${foto}`;
+    img.src = `img/Fotos/${foto}`;
     img.classList.add("thumbnail");
     img.alt = `Foto ${foto}`;
 
