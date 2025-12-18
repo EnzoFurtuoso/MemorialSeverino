@@ -55,7 +55,7 @@ export const familia = [
     nome: "Célia",
     foto: "./img/Filhos/Celia.jpg",
     netos: [
-      { nome: "Carlos Eduardo", foto: "./img/Netos/Duduu.jpg" },
+      { nome: "Carlos Eduardo", foto: "./img/Netos/Duduu.JPG" },
       { nome: "Celine Mariane", foto: "./img/Netos/Celine.jpg" },
     ],
   },
