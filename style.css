@@ -96,6 +96,27 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 18px;
+  display: inline-block;
+  padding: 6px 8px;
+}
+
+/* Navegação: rolagem horizontal no mobile e evitar corte dos itens */
+nav ul {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  gap: 8px;
+}
+nav ul li {
+  flex: 0 0 auto;
+}
+
+/* No mobile, alinhar à esquerda para não cortar o primeiro item */
+@media (max-width: 768px) {
+  nav ul {
+    justify-content: flex-start;
+    padding: 10px 12px;
+  }
 }
 
 .modalFoto {
@@ -194,6 +215,13 @@ nav ul li a {
   padding-top: 40px;
   background: linear-gradient(to bottom, #f9f6f0, #ffffff);
   position: relative;
+}
+
+/* Permite rolagem horizontal da árvore/timeline em telas pequenas */
+.timeline {
+  overflow-x: auto;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
 }
 
 .content-section {
@@ -637,4 +665,143 @@ footer {
   padding: 10px;
   background-color: #8b4513;
   color: white;
+}
+
+.footer-dev {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+.footer-dev > p {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.dev-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.logo-card:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo-empresa {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid white;
+  padding: 5px;
+  background-color: white;
+}
+
+.empresa-nome {
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.3px;
+  color: #fff;
+}
+
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: #25d366;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 999;
+}
+
+.whatsapp-link:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-icon {
+  width: 28px;
+  height: 28px;
+}
+
+@media (max-width: 480px) {
+  .empresa-nome {
+    font-size: 1rem;
+  }
+  .whatsapp-link {
+    width: 56px;
+    height: 56px;
+    right: 14px;
+    bottom: 14px;
+  }
+  .whatsapp-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Evita corte de nomes/longas palavras nas listas e cards */
+.message-card .name,
+.message-card .message,
+.netos > li span,
+.bisnetos li span {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* Abas (galeria) roláveis no mobile */
+.tabs {
+  gap: 8px;
+}
+@media (max-width: 640px) {
+  .tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding: 0 10px;
+  }
+  .tab-button {
+    flex: 0 0 auto;
+  }
+}
+
+/* Ajustes responsivos para evitar overflow no mobile */
+@media (max-width: 480px) {
+  .content-section {
+    margin: 12px;
+    padding: 16px;
+  }
+  #messages {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 10px;
+  }
 }
